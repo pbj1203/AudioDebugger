@@ -1,0 +1,177 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/home_root"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="25dp"
+            android:clickable="false"
+            android:gravity="center_horizontal"
+            android:shadowColor="#B0000000"
+            android:shadowDx="5.0"
+            android:shadowDy="5.0"
+            android:shadowRadius="5.0"
+            android:text="Audio Debugger"
+            android:textColor="#A1CAF1"
+            android:textSize="35dip" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+`		
+
+        <CheckBox
+            android:id="@+id/both_channel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="Both" />
+
+        <EditText
+            android:id="@+id/both_freq"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/both_channel"
+            android:layout_marginLeft="30dp"
+            android:layout_toRightOf="@id/both_channel"
+            android:ems="8"
+            android:inputType="numberDecimal" />
+
+        <TextView
+            android:id="@+id/both_hz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/both_freq"
+            android:layout_alignBottom="@id/both_freq"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/both_freq"
+            android:text="Hz" />
+
+        <EditText
+            android:id="@+id/both_offset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/both_freq"
+            android:layout_below="@id/both_freq"
+            android:ems="8"
+            android:inputType="numberDecimal" />
+
+        <TextView
+            android:id="@+id/both_pi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/both_offset"
+            android:layout_alignBottom="@id/both_offset"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/both_offset"
+            android:text="π" />
+
+        <CheckBox
+            android:id="@+id/left_channel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/both_offset"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:text="Left" />
+
+        <EditText
+            android:id="@+id/left_freq"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/both_offset"
+            android:layout_below="@id/both_offset"
+            android:layout_marginTop="15dp"
+            android:ems="8"
+            android:inputType="numberDecimal" />
+
+        <TextView
+            android:id="@+id/left_hz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/left_freq"
+            android:layout_alignBottom="@id/left_freq"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/left_freq"
+            android:text="Hz" />
+
+        <CheckBox
+            android:id="@+id/right_channel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/left_channel"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:text="Right" />
+
+        <EditText
+            android:id="@+id/right_freq"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/left_freq"
+            android:layout_below="@id/left_freq"
+            android:layout_marginTop="15dp"
+            android:ems="8"
+            android:inputType="numberDecimal" />
+
+        <TextView
+            android:id="@+id/right_hz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/right_freq"
+            android:layout_alignBottom="@id/right_freq"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/right_freq"
+            android:text="Hz" />
+
+        <SeekBar
+            android:id="@+id/volume"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/right_freq"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:max="100"
+            android:progress="20" />
+
+        <Button
+            android:id="@+id/play_or_stop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/volume"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:onClick="Play_Or_Stop"
+            android:text="   play   " />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:paddingTop="10dip"
+            android:text="Adatronics Inc.    www.adatronics.com"
+            android:textColor="#F0E130"
+            android:textSize="16dip" />
+    </LinearLayout>
+
+</LinearLayout>
